@@ -3,7 +3,7 @@
 
 # Provincial Maternal-Health Risk Dashboard
 
-[![Made with JupyterLab]
+[Made with JupyterLab]
 ## 🚀 Project Overview
 
 This repository hosts a **research-style dashboard** that visualizes maternal-health risks across Pakistan’s provinces, based on PDHS 2017–18 indicators.  
