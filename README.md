@@ -14,7 +14,7 @@ By combining publicly available survey data with GIS shapefiles from GADM, you g
 
 ## Repository Structure
 
-
+```
 
 .
 ├── README.md
@@ -33,7 +33,7 @@ By combining publicly available survey data with GIS shapefiles from GADM, you g
 ├── static\_prov\_top5\_bar.png           # Top‑5 risk provinces bar chart
 └── provincial\_research\_report.html    # Stand‑alone HTML research report
 
-
+````
 
 ## Purpose & Goals
 
