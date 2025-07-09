@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Detailed Maternal‑Health Research Report</title>
+  <style>
+    body { font-family: 'Times New Roman', serif; margin: 40px auto; max-width: 900px; }
+    h1 { text-align: center; font-size: 2.2em; }
+    h2 { margin-top: 1.8em; font-size: 1.5em; border-bottom: 1px solid #ccc; padding-bottom: 0.2em; }
+    p, ol { line-height: 1.5; }
+    code { background: #f4f4f4; padding: 2px 4px; }
+    select { display: block; margin: 10px auto; }
+    img { display: block; margin: 10px auto; max-width: 100%; }
+    figure { margin: 20px 0; text-align: center; }
+    figcaption { font-size: 0.9em; color: #555; }
+    footer { margin-top: 2em; font-size: 0.8em; color: #555; text-align: center; border-top: 1px solid #ccc; padding-top: 1em; }
+  </style>
+</head>
+<body>
+
+  <h1>Provincial Maternal‑Health Risk Analysis for Pakistan</h1>
+
+  <h2>Introduction</h2>
+  <p>Maternal mortality and morbidity remain major challenges in Pakistan. This report examines provincial disparities in antenatal care (ANC) and skilled birth attendance (SBA) using PDHS 2017–18 data, and constructs a composite <em>Risk Score</em> to highlight areas requiring targeted intervention.</p>
+
+  <h2>Data & Methods</h2>
+  <ol>
+    <li>Loaded <code>prov_pdhs_maternal_health.csv</code> and cleaned province names.</li>
+    <li>Merged with GADM v4.1 Admin‑1 shapefile.</li>
+    <li>Computed <em>Risk Score</em> via: <code>Risk Score = 100 – (ANC coverage + SBA coverage) / 2</code>.</li>
+    <li>Generated static bar charts and a static choropleth map.</li>
+  </ol>
+
+  <h2>Static Bar Charts</h2>
+  <label for="staticSelect">Select indicator:</label>
+  <select id="staticSelect" onchange="switchBarChart()">
+    <option value='static_anc_anc__bar.png'>ANC (≥4 visits) %</option><option value='static_sba_coverage__bar.png'>SBA coverage %</option><option value='static_facility_density_bar.png'>Facility density</option><option value='static_maternal-health_risk_bar.png'>Maternal-Health Risk</option>
+  </select>
+  <img id="barChartImage" src="static_maternal-health_risk_bar.png" alt="Indicator bar chart" />
+
+  <h2>Static Choropleth Map</h2>
+  <figure>
+    <img src="static_pakistan_risk_map.png" alt="Pakistan Maternal-Health Risk map" />
+    <figcaption>Maternal‑Health Risk Score by province</figcaption>
+  </figure>
+
+  <h2>Conclusion & Key Findings</h2>
+  <p><strong>Key Findings:</strong> Among Pakistan’s provinces, <em>Balochistan</em> has the highest maternal-health risk (Risk Score = 67.6), followed by <em>Khyber Pakhtunkhwa</em>. The lowest risk is in <em>Punjab</em> (Risk Score = 33.7).</p>
+
+  <footer>
+    Data sources: Pakistan DHS 2017–18; GADM v4.1.<br>
+    Report generated via Python, GeoPandas, Matplotlib.
+  </footer>
+
+  <script>
+    function switchBarChart() {
+      document.getElementById('barChartImage').src =
+        document.getElementById('staticSelect').value;
+    }
+  </script>
+
+</body>
+</html>
