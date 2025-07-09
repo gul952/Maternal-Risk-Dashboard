@@ -1,10 +1,9 @@
 
-
-
 # Provincial Maternal-Health Risk Dashboard
 
 [Made with JupyterLab]
-## 🚀 Project Overview
+
+## Project Overview
 
 This repository hosts a **research-style dashboard** that visualizes maternal-health risks across Pakistan’s provinces, based on PDHS 2017–18 indicators.  
 By combining publicly available survey data with GIS shapefiles from GADM, you get:
@@ -13,11 +12,11 @@ By combining publicly available survey data with GIS shapefiles from GADM, you g
 - **Static bar plots** of individual indicators (ANC coverage, SBA coverage, facility density)  
 - A **detailed HTML report** (`provincial_research_report.html`) summarizing data, methods, and key findings  
 
-##  Repository Structure
+## Repository Structure
 
-```
 
-````
+
+.
 ├── README.md
 ├── LICENSE
 ├── prov\_pdhs\_maternal\_health.csv      # Raw PDHS-derived CSV
@@ -31,19 +30,18 @@ By combining publicly available survey data with GIS shapefiles from GADM, you g
 ├── static\_maternal-health\_risk\_bar.png# Risk Score bar chart
 ├── static\_pakistan\_risk\_map.png       # National choropleth
 ├── static\_prov\_risk\_choropleth.png    # Provincial choropleth
-├── static\_prov\_top5\_bar.png           # Top‐5 risk provinces bar chart
-└── provincial\_research\_report.html    # Stand-alone HTML research report
+├── static\_prov\_top5\_bar.png           # Top‑5 risk provinces bar chart
+└── provincial\_research\_report.html    # Stand‑alone HTML research report
 
-````
 
-````
+
 ## Purpose & Goals
 
 1. **Data Exploration**  
    - Clean and normalize province names  
    - Validate Risk Score formula:  
-     \[
-       \text{Risk\_Score} = 100 - \frac{\text{ANC\_coverage (\%)} + \text{SBA\_coverage (\%)}}{2}
+     \[  
+       \text{Risk\_Score} = 100 - \frac{\text{ANC\_coverage (\%)} + \text{SBA\_coverage (\%)}}{2}  
      \]
 
 2. **Spatial Visualization**  
@@ -55,13 +53,13 @@ By combining publicly available survey data with GIS shapefiles from GADM, you g
    - Styled for readability (Times New Roman, embedded images, JavaScript selector for chart toggling)  
    - Key findings highlighted for policymakers and public health researchers  
 
-##  Data Sources
+## Data Sources
 
 - **PDHS 2017–18**: Provincial antenatal care (ANC) and skilled birth attendance (SBA) statistics  
 - **GADM v4.1**: Admin-1 boundaries for Pakistan  
-- **Project CSV**: `prov_pdhs_maternal_health.csv` – cleaned and standardized
+- **Project CSV**: `prov_pdhs_maternal_health.csv` – cleaned and standardized  
 
-##  Dependencies & Installation
+## Dependencies & Installation
 
 This project uses Python 3.10+ and the following libraries:
 
@@ -71,7 +69,7 @@ pip install pandas geopandas matplotlib plotly
 
 > If you run into GEOS/PROJ conflicts, see [Geopandas install guide](https://geopandas.org/install.html).
 
-## 🔧 How to Run
+## How to Run
 
 1. **Clone the repo**
 
@@ -97,7 +95,7 @@ pip install pandas geopandas matplotlib plotly
 5. **View static images**
    All `.png` files are output to the repo root—ideal for embedding in presentations or web pages.
 
-##  What You’ll See
+## What You’ll See
 
 * **Choropleth**: Provinces colored by Risk Score (red = higher risk)
 * **Bar Charts**: Ranked provinces for each indicator
@@ -105,19 +103,12 @@ pip install pandas geopandas matplotlib plotly
 
 ---
 
-
-##  License
-
-This project is licensed under the **MIT License**. See [LICENSE](LICENSE) for details.
-
----
-
-##  Useful Links
+## Useful Links
 
 * [Pakistan DHS 2017–18 Report](https://dhsprogram.com/pubs/pdf/FR354/FR354.pdf)
 * [GADM Database v4.1](https://gadm.org/)
 * [GeoPandas Documentation](https://geopandas.org/)
 * [Plotly Python](https://plotly.com/python/)
 
----
-
+```
+```
